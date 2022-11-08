@@ -1,0 +1,136 @@
+body {
+    margin: 0;
+    background-color: rgb(25, 24, 24);
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+.gallery {
+    display: flex;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70px;
+}
+
+.switch-theme {
+    font-size: 14px;
+    font-family: sans-serif;
+    padding: 7px;
+    padding-left: 50px;
+    padding-right: 50px;
+    background: rgb(228, 141, 170);
+}
+
+.main {
+    background-color: rgb(57, 57, 57);
+    min-height: calc(100vh - 140px);
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1rem;
+}
+
+
+
+.gallery__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70px;
+}
+
+.social {
+    font-size: 14px;
+    font-family: sans-serif;
+    padding: 7px;
+    padding-left: 50px;
+    padding-right: 50px;
+    background: rgb(228, 141, 170);
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(37, 37, 37, 0.8);
+    transform: scale(0)
+}
+
+.modal--show {
+    transform: scale(1);
+    transition-duration: 1s;
+
+}
+
+.modal__image-container {
+    display: flex;
+    justify-content: center;
+    width: 70%;
+    align-items: center;
+    position: relative;
+
+
+}
+
+.close-icon {
+    position: absolute;
+    display: flex;
+    width: 30px;
+    height: 30px;
+    background-color: rgb(0, 0, 0);
+    padding: 15px;
+    border-radius: 15px;
+    top: 20px;
+    right: 40px;
+}
+
+.arrow-icon {
+    width: 20px;
+    background-color: rgb(0, 0, 0);
+    padding: 15px;
+    border-radius: 15px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+}
+
+.left {
+    left: 40px;
+    top: 50vh;
+}
+
+.right {
+    right: 10px;
+    top: 50vh;
+}
+
+.modal__image {
+    transition: opacity .3s;
+}
+
+.modal-image-show {
+    opacity: 1;
+}
+
+.modal-image-fade {
+    opacity: 0;
+}
